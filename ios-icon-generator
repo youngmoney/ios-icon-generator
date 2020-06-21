@@ -11,7 +11,7 @@ ios::create-icon() {
 }
 
 ios::generate-icons() {
-  if ! command -v inkscape; then
+  if ! command -v inkscape >/dev/null 2>&1; then
       echo "inkscape must be installed"
       return 1
   fi
