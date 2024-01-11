@@ -58,7 +58,7 @@ ios::generate-icons-internal() {
   fi
   while read line; do
       # shellcheck disable
-      inkscape -D -z "${icon}" --export-id=icon -j -o "${path}/"${line} || return 1
+      inkscape -D -z "${icon}" -o "${path}/"${line} || return 1
   done <<EOF
 Icon.png -h 1024 -w 1024
 icon_20pt.png -h 20 -w 20
